@@ -37,7 +37,7 @@ class UserController extends Controller
     # split data
     preg_match('/(.*?)(\d+)(.*)/', $validated['biodata'], $data);
     [$text, $name, $age, $city] = $data;
-    $name = trim($name);
+    $name = trim(strtoupper($name));
     $age = trim($age);
     $city = strtoupper($city);
 
